@@ -246,6 +246,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-search">
+          <a href="/scarch/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
 
       
         <li class="menu-item menu-item-search">
@@ -493,6 +503,19 @@
 <li>编辑 <code>_config.yml</code>， 修改字段 <code>google_analytics</code> 字段，值设置成你的谷歌统计脚本 id。</li>
 </ol>
 <p><img src="http://ow9hz0bvy.bkt.clouddn.com/%E8%B0%B7%E6%AD%8C%E7%BB%9F%E8%AE%A1.jpeg" alt="谷歌ID"></p>
+<p>###本地搜索Local Search</p>
+<p>添加百度/谷歌/本地 自定义站点内容搜索</p>
+<ol>
+<li><p>安装 <code>hexo-generator-searchdb</code>，在站点的根目录下执行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-generator-searchdb --save</div></pre></td></tr></table></figure>
+</li>
+<li><p>编辑 站点配置文件，新增以下内容到任意位置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">search:</div><div class="line">  path: search.xml</div><div class="line">  field: post</div><div class="line">  format: html</div><div class="line">  limit: 10000</div></pre></td></tr></table></figure>
+</li>
+<li><p>编辑 主题配置文件，启用本地搜索功能：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># Local search</div><div class="line">local_search:</div><div class="line">  enable: true</div></pre></td></tr></table></figure>
+</li>
+</ol>
 
           
         
@@ -973,7 +996,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共4.4k字</span>
+  <span class="post-count">博客全站共4.5k字</span>
 </div>
 
         
