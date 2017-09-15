@@ -394,130 +394,19 @@
       
         
           
-            <h2 id="主题设定"><a href="#主题设定" class="headerlink" title="主题设定"></a>主题设定</h2><h3 id="选择-Scheme"><a href="#选择-Scheme" class="headerlink" title="选择 Scheme"></a>选择 Scheme</h3><p>Scheme 是 NexT 提供的一种特性，借助于 Scheme，NexT 为你提供多种不同的外观。同时，几乎所有的配置都可以 在 Scheme 之间共用。目前 NexT 支持三种 Scheme，他们是：</p>
-<ul>
-<li>Muse - 默认 Scheme，这是 NexT 最初的版本，黑白主调，大量留白</li>
-<li>Mist - Muse 的紧凑版本，整洁有序的单栏外观</li>
-<li>Pisces - 双栏 Scheme，小家碧玉似的清新</li>
-</ul>
-<p>Scheme 的切换通过更改 主题配置文件，搜索 scheme 关键字。 你会看到有三行 scheme 的配置，将你需用启用的 scheme 前面注释 <code>#</code> 去除即可。</p>
-<p>选择 Pisces Scheme</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#scheme: Muse</div><div class="line">#scheme: Mist</div><div class="line">scheme: Pisces</div></pre></td></tr></table></figure>
-<h3 id="设置菜单"><a href="#设置菜单" class="headerlink" title="设置菜单"></a>设置菜单</h3><p>菜单配置包括三个部分，第一是菜单项（名称和链接），第二是菜单项的显示文本，第三是菜单项对应的图标。 NexT 使用的是 <a href="http://fontawesome.io/" target="_blank" rel="external">Font Awesome</a> 提供的图标， Font Awesome 提供了 600+ 的图标，可以满足绝大的多数的场景，同时无须担心在 Retina 屏幕下 图标模糊的问题。</p>
-<p>编辑 主题配置文件<code>_config.yml</code>，修改以下内容：</p>
-<p>设定菜单内容，对应的字段是 <code>menu</code>。 菜单内容的设置格式是：<code>item name: link</code>。其中 <code>item name</code>是一个名称，这个名称并不直接显示在页面上，她将用于匹配图标以及翻译。</p>
-<p>菜单示例配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  home: /</div><div class="line">  archives: /archives</div><div class="line">  #about: /about</div><div class="line">  #categories: /categories</div><div class="line">  tags: /tags</div><div class="line">  #commonweal: /404.html</div></pre></td></tr></table></figure>
-<p>NexT 默认的菜单项有（标注 ** 的项表示需要手动创建这个页面）：</p>
-<table>
-<thead>
-<tr>
-<th>键值</th>
-<th>设定值</th>
-<th>显示文本（简体中文）</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>home</td>
-<td><code>home: /</code></td>
-<td>主页</td>
-</tr>
-<tr>
-<td>archives</td>
-<td><code>archives: /archives</code></td>
-<td>归档页</td>
-</tr>
-<tr>
-<td>categories</td>
-<td><code>categories: /categories</code></td>
-<td>分类页 **</td>
-</tr>
-<tr>
-<td>tags</td>
-<td><code>tags: /tags</code></td>
-<td>标签页 **</td>
-</tr>
-<tr>
-<td>about</td>
-<td><code>about: /about</code></td>
-<td>关于页面 **</td>
-</tr>
-<tr>
-<td>commonweal</td>
-<td><code>commonweal: /404.html</code></td>
-<td>公益 404 **</td>
-</tr>
-</tbody>
-</table>
-<p>由于主题默认只显示<code>home</code>和<code>archives</code></p>
-<p>剩下的页面需要自己添加：</p>
-<p>例如添加<code>about</code>页:</p>
-<p>在终端里输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new page &quot;about&quot;</div></pre></td></tr></table></figure>
-<p>之后在站点目录下的source文件夹下，会新增一个<code>about</code>的文件夹，里面有一个<code>index.md</code>文件</p>
-<p>主题目录下的 <code>languages/{language}.yml</code>（<code>{language}</code> 为你所使用的语言）。</p>
-<p>以简体中文为例，若你需要添加一个菜单项，比如 <code>something</code>。那么就需要修改简体中文对应的翻译文件<code>languages/zh-Hans.yml</code>，在 <code>menu</code> 字段下添加一项：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  home: 首页</div><div class="line">  archives: 归档</div><div class="line">  categories: 分类</div><div class="line">  tags: 标签</div><div class="line">  about: 关于</div><div class="line">  search: 搜索</div><div class="line">  commonweal: 公益404</div><div class="line">  something: 有料</div></pre></td></tr></table></figure>
-<p>设定菜单项的图标，对应的字段是 <code>menu_icons</code>。 此设定格式是 <code>item name: icon name</code>，其中 <code>item name</code> 与上一步所配置的菜单名字对应，<code>icon name</code> 是 Font Awesome 图标的 名字。而 <code>enable</code> 可用于控制是否显示图标，你可以设置成 <code>false</code> 来去掉图标。</p>
-<p>菜单图标配置示例</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">menu_icons:</div><div class="line">  enable: true</div><div class="line">  # Icon Mapping.</div><div class="line">  home: home</div><div class="line">  about: user</div><div class="line">  categories: th</div><div class="line">  tags: tags</div><div class="line">  archives: archive</div><div class="line">  commonweal: heartbeat</div></pre></td></tr></table></figure>
-<h3 id="添加动态背景"><a href="#添加动态背景" class="headerlink" title="添加动态背景"></a>添加动态背景</h3><p>由于我的next主题是5.1.2，自带两种背景动画效果。</p>
-<p>直接在主题配置文件中找到<code>canvas_nest</code>或者<code>three_waves</code>，根据你的需求设置值为 <code>true</code> 或者 <code>false</code> 即可，（注意分号后面要加一个空格）。</p>
-<p>两种背景效果只能开启一种。</p>
-<p><code>canvas_nest</code> 配置示例</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># canvas_nest</div><div class="line">canvas_nest: true //开启动画</div><div class="line">canvas_nest: false //关闭动画</div></pre></td></tr></table></figure>
-<p>最终效果</p>
-<p><img src="http://ow9hz0bvy.bkt.clouddn.com/canvas_nest%E6%95%88%E6%9E%9C.jpg" alt="canvas_nest效果"></p>
-<p><code>three_waves</code> 配置示例</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># three_waves</div><div class="line">three_waves: true //开启动画</div><div class="line">three_waves: false //关闭动画</div></pre></td></tr></table></figure>
-<p>最终效果</p>
-<p><img src="http://ow9hz0bvy.bkt.clouddn.com/three_waves%E6%95%88%E6%9E%9Cjpg" alt="three_waves效果"></p>
-<h3 id="自定义鼠标样式"><a href="#自定义鼠标样式" class="headerlink" title="自定义鼠标样式"></a>自定义鼠标样式</h3><p>打开<code>themes/next/source/css/_custom/custom.styl</code>,在里面写下如下代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">// 鼠标样式</div><div class="line">  * &#123;</div><div class="line">      cursor: url(&quot;图片地址.ico&quot;),auto!important</div><div class="line">  &#125;</div><div class="line">  :active &#123;</div><div class="line">      cursor: url(&quot;图片地址.ico&quot;),auto!important</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
-<p>其中 url 里面必须是 ico 图片，ico 图片可以上传到网上（我是使用七牛云图床），然后获取外链，复制到 url 里就行了</p>
-<h2 id="样式设定"><a href="#样式设定" class="headerlink" title="样式设定"></a>样式设定</h2><h3 id="全站底部字数统计"><a href="#全站底部字数统计" class="headerlink" title="全站底部字数统计"></a>全站底部字数统计</h3><p>效果展示</p>
-<p><img src="http://ow9hz0bvy.bkt.clouddn.com/%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1.png" alt="底部字数统计"></p>
-<p>切换到根目录下，然后运行如下代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-wordcount --save</div></pre></td></tr></table></figure>
-<p>然后在<code>/themes/next/layout/_partials/footer.swig</code>文件尾部加上：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;theme-info&quot;&gt;</div><div class="line">  &lt;div class=&quot;powered-by&quot;&gt;&lt;/div&gt;</div><div class="line">  &lt;span class=&quot;post-count&quot;&gt;博客全站共&#123;&#123; totalcount(site) &#125;&#125;字&lt;/span&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
-<h3 id="在网站底部添加访问量"><a href="#在网站底部添加访问量" class="headerlink" title="在网站底部添加访问量"></a>在网站底部添加访问量</h3><p>打开<code>\themes\next\layout_partials\footer.swig</code>文件,在copyright前加上</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script async src=&quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
-<p>然后再合适的位置添加显示统计的代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;powered-by&quot;&gt;</div><div class="line">&lt;i class=&quot;fa fa-user-md&quot;&gt;&lt;/i&gt;&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;</div><div class="line">  本站访客数:&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;</div><div class="line">&lt;/span&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
-<p>在这里有两中不同计算方式的统计代码：</p>
-<ol>
-<li><strong>pv</strong>的方式，单个用户连续点击n篇文章，记录n次访问量</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;</div><div class="line">    本站总访问量&lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次</div><div class="line">&lt;/span&gt;</div></pre></td></tr></table></figure>
-<ol>
-<li><strong>uv</strong>的方式，单个用户连续点击n篇文章，只记录1次访客数</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;</div><div class="line">  本站总访问量&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;次</div><div class="line">&lt;/span&gt;</div></pre></td></tr></table></figure>
-<p>添加之后再执行<code>hexo d -g</code>，然后再刷新页面就能看到效果</p>
-<h2 id="第三方支持"><a href="#第三方支持" class="headerlink" title="第三方支持"></a>第三方支持</h2><h3 id="添加第三方统计"><a href="#添加第三方统计" class="headerlink" title="添加第三方统计"></a>添加第三方统计</h3><p>我添加了谷歌统计</p>
-<ol>
-<li>登陆<a href="https://analytics.google.com/" target="_blank" rel="external">谷歌统计</a>，新建一个网站账号，并且获取跟踪代码</li>
-<li>把生成的ID复制下来</li>
-<li>编辑 <code>_config.yml</code>， 修改字段 <code>google_analytics</code> 字段，值设置成你的谷歌统计脚本 id。</li>
-</ol>
-<p><img src="http://ow9hz0bvy.bkt.clouddn.com/%E8%B0%B7%E6%AD%8C%E7%BB%9F%E8%AE%A1.jpeg" alt="谷歌ID"></p>
-<p>###本地搜索Local Search</p>
-<p>添加百度/谷歌/本地 自定义站点内容搜索</p>
-<ol>
-<li><p>安装 <code>hexo-generator-searchdb</code>，在站点的根目录下执行以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-generator-searchdb --save</div></pre></td></tr></table></figure>
-</li>
-<li><p>编辑 站点配置文件，新增以下内容到任意位置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">search:</div><div class="line">  path: search.xml</div><div class="line">  field: post</div><div class="line">  format: html</div><div class="line">  limit: 10000</div></pre></td></tr></table></figure>
-</li>
-<li><p>编辑 主题配置文件，启用本地搜索功能：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># Local search</div><div class="line">local_search:</div><div class="line">  enable: true</div></pre></td></tr></table></figure>
-</li>
-</ol>
+          主题设定选择 SchemeScheme 是 NexT 提供的一种特性，借助于 Scheme，NexT 为你提供多种不同的外观。同时，几乎所有的配置都可以 在 Scheme 之间共用。目前 NexT 支持三种 Scheme，他们是：
 
-          
+Muse - 默认 Scheme，这是 NexT 最初的版本，黑白主调，大量留白
+Mist - Muse 的紧凑版本，整洁有序的单栏外观
+Pisces - 双栏 Sc
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/15/NexT主题个性化教程/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -635,27 +524,15 @@
       
         
           
-            <p><strong>RPG=Role-playing Game：角色扮演游戏</strong><br>由玩家扮演游戏中的一个或数个角色，有完整的故事情节的游戏。玩家可能会与冒险类游戏混淆，其实区分很简单，RPG游戏更强调的是剧情发展和个人体验，一般来说，RPG可分为日式和美式两种，主要区别在于文化背景和战斗方式。日式RPG多采用回合制或半即时制战斗，如《最终幻想》系列，大多国产中文 RPG也可归为日式RPG之列，如大家熟悉的《仙剑》、《剑侠》等；美式RPG如《暗黑破坏神》系列。</p>
-<p><strong>ACT=Action Game：动作游戏</strong><br>玩家控制游戏人物用各种武器消灭敌人以过关的游戏，不追求故事情节，电脑上的动作游戏大多脱胎于早期的街机游戏和动作游戏如《魂斗罗》、《三国志》、《鬼泣》系列等，设计主旨是面向普通玩家，以纯粹的娱乐休闲为目的，一般有少部分简单的解谜成份，操作简单，易于上手，紧张刺激，属于“大众化”游戏。</p>
-<p><strong>AVG=Adventure Game：冒险游戏</strong><br>由玩家控制游戏人物进行虚拟冒险的游戏。与RPG不同的是，AVG的特色是故事情节往往是以完成一个任务或解开某些谜题的形式出现的，而且在游戏过程中刻意强调谜题的重要性。AVG也可再细分为动作类（AAG）和解迷类两种，动作类AVG（AAG）可以包含一些格斗或射击成分如《生化危机》系列、《古墓丽影》系列、《恐龙危机》等；而解迷类AVG则纯粹依靠解谜拉动剧情的发展，难度系数较大，代表是超经典的《神秘岛》系列。</p>
-<p><strong>AAG=Act Adventure Game：动作冒险游戏</strong><br>为冒险游戏的一个分支。但非常流行,自成一体,大有超过图形类AVG之势。故单独列出。</p>
-<p><strong>SLG=Simulation Game：策略游戏</strong><br>玩家运用策略与电脑或其它玩家较量，以取得各种形式胜利的游戏，或统一全国，或开拓外星殖民地。策略游戏可分为回合制和即时制两种，回合制策略游戏如大家喜欢的《三国志》系列、《樱花大战》系列；即时制策略游戏如《命令与征服》系列、《帝国》系列、《沙丘》等。后来有些媒体将细分出模拟经营，即SIM（simulation）类游戏，如《模拟人生》、《模拟城市》、《过山车大亨》、《主题公园》等。TCG（养成类）游戏，比如《明星志愿》等。</p>
-<p><strong>SRPG=Simulation Role-playing Game:战略类角色扮演</strong><br>原本角色扮演和战略应该不能结合，但是如《火焰纹章》之类的游戏，因为操控小队进行大地图回合制战斗极具战略型（还因此被称为战棋类游戏）而且对人物进行培养扮演参与剧情也是很重要的游戏内容因此被玩家划归为是SRPG，可以说喜欢玩的人不多，人气不够。</p>
-<p><strong>RTS=Real-Time Strategy Game：即时战略游戏</strong><br>本来属于策略游戏SLG的一个分支，但由于其在世界上的迅速风靡，使之慢慢发展成了一个单独的类型，知名度甚至超过了SLG，有点像现在国际足联和国际奥委会的关系。代表作有《红色警戒》系列、《魔兽争霸》系列、《帝国时代》系列、《星际争霸》等等。后来，从其上又衍生出了所谓“即时战术游戏”，多以控制一个小队完成任务的方式，突出战术的作用，以《盟军敢死队》为代表。</p>
-<p><strong>FTG=Fighting Game：格斗游戏</strong><br>由玩家操纵各种角色与电脑或另一玩家所控制的角色进行格斗的游戏。按呈画技术可再分为2D和3D两种，2D格斗游戏有著名的《街霸》系列、《侍魂》系列、《拳皇》系列等；3D格斗游戏如《铁拳》、《高达格斗》等。此类游戏不以剧情为主，场景设定也不是很复杂，背景展示，场景、人物、操控等也比较简单，但操作难度较大，主要依靠玩家迅速的判断和微操作取胜，此类游戏最考验玩家的个人能力。</p>
-<p><strong>STG= Shooting Game：射击类游戏</strong><br>这里所说的射击类，并非是类似《VR特警》的模拟射击（枪战），而是指纯的飞机射击，由玩家控制各种飞行物(主要是飞机)完成任务或过关的游戏。此类游戏分为两种，一叫科幻飞行模拟游戏（Science-Simulation Game），非现实的，想象空间为内容，如《自由空间》、《星球大战》系列等；另一种叫真实飞行模拟游戏（Real- Simulation Game），以现实世界为基础，以真实性取胜，追求拟真，达到身临其境的感觉，如《Lockon》系列、《DCS》、《苏-27》等等。</p>
-<p><strong>FPS=First Personal Shooting Game：第一人称视角射击游戏</strong><br>严格来说它是属于动作游戏的一个分支，但和RTS一样，由于其在世界上的迅速风靡，使之展成了一个单独的类型，典型的有使命召唤系列、DOOM系列、QUAKE系列、《虚幻》、《半条命》、《CS》、《守望先锋》……不胜枚举。</p>
-<p><strong>TPS=Third Personal Shooting Game：第三人称视角射击游戏</strong><br>它和第一人称射击游戏一样，是射击游戏的一种。但它与第一人称射击游戏的区别在于第一人称射击游戏里屏幕上显示的只第三人称射击游戏，有主角的视野，而第三人称射击游戏更加强调动作感，主角在游戏屏幕上是可见的。如《生化危机》系列，这个游戏可以归为AAG系列，也可以是TPS。《合金弹头》系列，它也参杂着ACT的部分。《质量效应》系列，而它则是典型的角色扮演类射击游戏。这类游戏还有很多很多。</p>
-<p><strong>PZL=Puzzle Game：益智类游戏</strong><br>Puzzle的原意是指以前用来培养儿童智力的拼图游戏，引申为各类有趣的益智游戏，总的来说适合休闲，最经典的嘛~就是大家耳熟能详的《俄罗斯方块》。<br>SPG=Sports Game：体育竞技类游戏<br>在电脑上模拟各类竞技体育运动的游戏,花样繁多，模拟度高，广受欢迎。比如《FIFA》系列、《NBA Live》系列、《实况足球》系列等。</p>
-<p><strong>RCG=Racing Game：竞速游戏[也有称作为RAC的]</strong><br>在电脑上模拟各类赛车运动的游戏，通常是在比赛场景下进行，非常讲究图像音效技术，往往是代表电脑游戏的尖端技术。惊险刺激，真实感强，深受车迷喜爱，代表作有《极品飞车》、《山脊赛车》、《摩托英豪》等。另一种说法称之为“Driving Game”。目前，RCG内涵越来越丰富，出现了另一些其他模式的竞速游戏，如赛艇的，赛马等。</p>
-<p><strong>CAG=Card Game：卡片游戏</strong><br>玩家操纵角色通过卡片战斗模式来进行的游戏。丰富的卡片种类使得游戏富于多变化性，给玩家无限的乐趣，代表作有著名的《游戏王》系列，《万智牌》系列，从广意上说《王国之心》也可以归于此类。</p>
-<p><strong>TAB=Table Game：桌面游戏</strong><br>顾名思义，是从以前的桌面游戏脱胎到电脑上的游戏，如各类强手棋（即掷骰子决定移动格数的游戏），经典的如《大富翁》系列；棋牌类游戏也属于TAB，如《拖拉机》、《红心大战》、《麻将》等等。</p>
-<p><strong>MSC=Music Game∶音乐游戏</strong><br>培养玩家音乐敏感性，增强音乐感知的游戏。伴随美妙的音乐，有的要求玩家翩翩起舞，有的要求玩家手指体操，例如大家都熟悉的跳舞机，就是个典型，目前的人气网游《劲乐团》也属其列。</p>
-<p><strong>WAG=Wap Game：手机游戏</strong><br>目前游戏随处可以玩，连手机也必带休闲游戏，网民最喜欢手机游戏的种类，益智类比率最高，其次依次为动作类、战略类、模拟类、射击类。列举几个手机游戏例子：《金属咆哮》、《FF7 前传》等。</p>
-<p><strong>MUD=泥巴游戏</strong><br>主要是依靠文字进行游戏的游戏，图形作为辅助。1978年，英国埃塞克斯大学的罗伊?特鲁布肖用DEC-10编写了世界上第一款MUD游戏—— “MUD1”，是第一款真正意义上的实时多人交互网络游戏，这是一个纯文字的多人世界。（这可能就是MUD的命名来源吧）其他代表作有：《侠客行》、《子午线59》、《万王之王》。</p>
-<p><strong>MOBA=Multiplayer online battle arena：多人在线战术竞技游戏</strong><br>Multiplayer online battle arena（MOBA），也被称为Action real-time strategy（Action RTS，ARTS）。是视频游戏（Video Game）——即时战略游戏（RTS）的一个子类。在这类游戏中，在战斗中一般需要购买装备，玩家通常被分为两队，两队在分散的游戏地图中互相竞争，每个玩家都通过一个RTS风格的界面控制所选的角色。但不同于《星际争霸》等传统的硬核的RTS游戏，这类游戏通常没有RTS游戏中常见的建筑群、资源、训练兵种等组织单位，且玩家只控制自己所选的角色。代表作有：《英雄联盟》、《dota》、《D10》。</p>
-
-          
+          RPG=Role-playing Game：角色扮演游戏由玩家扮演游戏中的一个或数个角色，有完整的故事情节的游戏。玩家可能会与冒险类游戏混淆，其实区分很简单，RPG游戏更强调的是剧情发展和个人体验，一般来说，RPG可分为日式和美式两种，主要区别在于文化背景和战斗方式。日式RPG多采用回合制或半即时制战斗，如《最终幻想》系列，大多国产中文 RPG也可归为日式RPG之列，如大家熟悉的《仙剑》、《剑侠》
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/14/游戏分类明细/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -773,70 +650,22 @@
       
         
           
-            <p>某天突发奇想，想要找一个可以自己一个人码字的地方。现在提供这样服务的网站很多，甚至简书和知乎已经支持markdown在线写作。但是我不是一个能接受别人评论我写作内容的人，说白了就是怕喷。所以，只能自己建个窝，来安放我TM胡乱瞎写的脑洞和文字。</p>
-<p>正好知乎搜到了如何简单快速小白建博客的教程，感觉还在我操作接受的范围，所以我就按照网上大神的步骤，建了这个博客。</p>
-<blockquote>
-<p>所需网站：</p>
-</blockquote>
-<ol>
-<li><a href="https://github.com/" target="_blank" rel="external">GitHub</a></li>
-<li>域名购买：<a href="https://sg.godaddy.com/zh/" target="_blank" rel="external">GoDaddy</a></li>
-<li>DNS解析：<a href="https://support.dnspod.cn" target="_blank" rel="external">dnspod</a></li>
-<li>Hexo主题设置：<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">NexT</a></li>
-<li>图床：<a href="https://portal.qiniu.com" target="_blank" rel="external">七牛</a></li>
-<li>阅读统计：<a href="https://leancloud.cn/" target="_blank" rel="external">LeanCloud</a></li>
-</ol>
-<p>##github page</p>
-<p><a href="https://pages.github.com/" target="_blank" rel="external">github-page</a>是一个免费的静态网站托管平台，由github提供，它具有以下特点：</p>
-<ol>
-<li>免空间费，免流量费</li>
-<li>具有项目主页和个人主页两种选择</li>
-<li>支持页面生成，可以使用jekyll来布局页面，使用<code>markdown</code>来书写正文</li>
-<li>可以自定义域名</li>
-</ol>
-<p>##1、安装Hexo</p>
-<h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><p><a href="https://hexo.io/docs" target="_blank" rel="external">Hexo官网</a>上本就有对Hexo安装及使用的详细介绍，墙裂推荐。</p>
-<p>以下是步骤：</p>
-<blockquote>
-<p>下载</p>
-</blockquote>
-<ol>
-<li>用来生成静态页面：<a href="https://nodejs.org/en/" target="_blank" rel="external">node.js</a></li>
-<li>用来将本地Hexo内容提交到Github上，下载安装后用终端就可以提交内容。<a href="https://git-scm.com/download/" target="_blank" rel="external">git</a></li>
-</ol>
-<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>Node.js和Git都安装好后就可以正式安装Hexo了，终端执行如下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo npm install -g hexo</div></pre></td></tr></table></figure>
-<p>输入管理员密码（Mac登录密码）即开始安装 (<code>sudo</code>:linux系统管理指令 <code>-g</code>:全局安装),**记得加<code>sudo</code></p>
-<p>否则会报错。</p>
-<h3 id="初始化Hexo"><a href="#初始化Hexo" class="headerlink" title="初始化Hexo"></a>初始化Hexo</h3><p>选定一个你要存放博客文件的目录，比如Documents/blog</p>
-<p>然后用终端进到这个文件夹下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cd Documents/blog</div></pre></td></tr></table></figure>
-<p>然后在目录下执行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init blog</div></pre></td></tr></table></figure>
-<p>执行如下命令，安装npm：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install</div></pre></td></tr></table></figure>
-<p>执行如下命令，开启hexo服务器：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo s</div></pre></td></tr></table></figure>
-<p>此时，浏览器中打开网址[<a href="http://localhost:4000j就能看到安装好的Hexo页面" target="_blank" rel="external">http://localhost:4000j就能看到安装好的Hexo页面</a></p>
-<p>本地设置好后，接下来开始关联Github。</p>
-<p>##2、关联GitHub</p>
-<h3 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h3><p><a href="https://github.com/" target="_blank" rel="external">GitHub</a>注册账号</p>
-<p>输入账号、邮箱、密码,然后点击注册按钮.然后按照提示一直下一步就可以了，注册成功后记得验证邮箱。</p>
-<p><img src="http://ow9hz0bvy.bkt.clouddn.com/github%E6%B3%A8%E5%86%8C.png" alt="注册"></p>
-<p>hexo支持markdown语法，我们可以在电脑中用支持markdown的编辑器写作，然后本地同步到博客上。</p>
-<blockquote>
-<p>参考资料：</p>
-</blockquote>
-<ol>
-<li><a href="http://www.jianshu.com/p/f054333ac9e6" target="_blank" rel="external">hexo的next主题个性化教程:打造炫酷网站</a></li>
-<li><a href="http://tc9011.com/2017/02/02/hexo%E6%96%87%E7%AB%A0%E6%B7%BB%E5%8A%A0%E7%89%88%E6%9D%83%E5%A3%B0%E6%98%8E%E5%8F%8A%E4%B8%80%E4%BA%9B%E7%89%B9%E6%95%88/" target="_blank" rel="external">hexo文章添加版权声明及一些特效</a></li>
-<li><a href="https://www.zhihu.com/question/24422335" target="_blank" rel="external">知乎：有哪些好看的Hexo主题</a></li>
-<li><a href="http://www.cnfeat.com/blog/2014/05/10/how-to-build-a-blog/" target="_blank" rel="external">如何搭建一个独立博客</a></li>
-<li><a href="http://gonghonglou.com/2016/02/03/firstblog/" target="_blank" rel="external">Mac上搭建基于GitHub的Hexo博客</a></li>
-<li><a href="http://www.cnblogs.com/debugzer0/articles/5461804.html" target="_blank" rel="external">hexo next 主题配置</a></li>
-</ol>
+          某天突发奇想，想要找一个可以自己一个人码字的地方。现在提供这样服务的网站很多，甚至简书和知乎已经支持markdown在线写作。但是我不是一个能接受别人评论我写作内容的人，说白了就是怕喷。所以，只能自己建个窝，来安放我TM胡乱瞎写的脑洞和文字。
+正好知乎搜到了如何简单快速小白建博客的教程，感觉还在我操作接受的范围，所以我就按照网上大神的步骤，建了这个博客。
 
-          
+所需网站：
+
+
+GitHub
+域名购买：
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/14/用Macbook搭建基于GitHub的Hexo博客/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -996,7 +825,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共4.5k字</span>
+  <span class="post-count">博客全站共4.6k字</span>
 </div>
 
         
