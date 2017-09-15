@@ -21,7 +21,7 @@
     <url>%2F2017%2F09%2F14%2F%E7%94%A8Macbook%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8EGitHub%E7%9A%84Hexo%E5%8D%9A%E5%AE%A2%2F</url>
     <content type="text"><![CDATA[某天突发奇想，想要找一个可以自己一个人码字的地方。现在提供这样服务的网站很多，甚至简书和知乎已经支持markdown在线写作。但是我不是一个能接受别人评论我写作内容的人，说白了就是怕喷。所以，只能自己建个窝，来安放我TM胡乱瞎写的脑洞和文字。 正好知乎搜到了如何简单快速小白建博客的教程，感觉还在我操作接受的范围，所以我就按照网上大神的步骤，建了这个博客。 所需网站： GitHub 域名购买：GoDaddy DNS解析：dnspod Hexo主题设置：NexT 图床：七牛 阅读统计：LeanCloud ##github page github-page是一个免费的静态网站托管平台，由github提供，它具有以下特点： 免空间费，免流量费 具有项目主页和个人主页两种选择 支持页面生成，可以使用jekyll来布局页面，使用markdown来书写正文 可以自定义域名 ##1、安装Hexo 配置环境Hexo官网上本就有对Hexo安装及使用的详细介绍，墙裂推荐。 以下是步骤： 下载 用来生成静态页面：node.js 用来将本地Hexo内容提交到Github上，下载安装后用终端就可以提交内容。git 安装HexoNode.js和Git都安装好后就可以正式安装Hexo了，终端执行如下命令： 1$ sudo npm install -g hexo 输入管理员密码（Mac登录密码）即开始安装 (sudo:linux系统管理指令 -g:全局安装),**记得加sudo 否则会报错。 初始化Hexo选定一个你要存放博客文件的目录，比如Documents/blog 然后用终端进到这个文件夹下 1$ cd Documents/blog 然后在目录下执行 1$ hexo init blog 执行如下命令，安装npm： 1$ npm install 执行如下命令，开启hexo服务器： 1$ hexo s 此时，浏览器中打开网址[http://localhost:4000j就能看到安装好的Hexo页面 本地设置好后，接下来开始关联Github。 ##2、关联GitHub 注册账号GitHub注册账号 输入账号、邮箱、密码,然后点击注册按钮.然后按照提示一直下一步就可以了，注册成功后记得验证邮箱。 hexo支持markdown语法，我们可以在电脑中用支持markdown的编辑器写作，然后本地同步到博客上。 参考资料： hexo的next主题个性化教程:打造炫酷网站 hexo文章添加版权声明及一些特效 知乎：有哪些好看的Hexo主题 如何搭建一个独立博客 Mac上搭建基于GitHub的Hexo博客 hexo next 主题配置]]></content>
       <tags>
-        <tag>Hexo；博客</tag>
+        <tag>Hexo 博客</tag>
       </tags>
   </entry>
 </search>
