@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-09-18T02:59:44.000Z</updated>
+  <updated>2017-09-18T08:06:38.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo Seo简单优化</title>
+    <link href="http://yoursite.com/2017/09/18/Hexo-Seo%E7%AE%80%E5%8D%95%E4%BC%98%E5%8C%96/"/>
+    <id>http://yoursite.com/2017/09/18/Hexo-Seo简单优化/</id>
+    <published>2017-09-18T08:05:35.000Z</published>
+    <updated>2017-09-18T08:06:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>我建好了博客上传了内容，才发现其他人其实根本就不能在网上搜到我，自嗨的很开心。但是建立博客的目的不就是想让更多的人发现和评论我写的东西么，所以让搜索引擎知道和收录我的网站就很重要了。</p><p>所以我在网上找了各种大神留下的教程，自己慢慢的学着优化博客。</p><h3 id="验证网站"><a href="#验证网站" class="headerlink" title="验证网站"></a>验证网站</h3><p>在百度和谷歌上分别搜索</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">site:你的博客域名链接</div></pre></td></tr></table></figure><p>注意博客域名不是xxx.github.io。</p><p>如果此前没有进行过操作，应该是搜不到的，并且搜索出来的结果含有搜索引擎提交入口。</p><h3 id="提交域名"><a href="#提交域名" class="headerlink" title="提交域名"></a>提交域名</h3><p>需要在各个搜索引擎的站长平台添加自己的网站。</p><p><a href="http://zhanzhang.baidu.com/" target="_blank" rel="external">百度站长平台</a></p><p><img src="http://ow9hz0bvy.bkt.clouddn.com/WX20170918-151702.png" alt="添加百度站点"></p><p><a href="http://zhanzhang.sogou.com/" target="_blank" rel="external">搜狗站长平台</a></p><p><a href="https://www.google.com/webmasters/tools/dashboard?hl=zh-CN&amp;authuser=0&amp;siteUrl=http://249251.xyz/&amp;sig=ALjLGbOo1PTlfBiYN2zM1Qzt7OTPjNFQzg" target="_blank" rel="external">谷歌Search Console</a></p><p>原理都相同，进入搜索引擎提交入口，添加域名，选择验证网站，有3种验证方式，本文推荐采用<strong>HTML标签验证</strong>。</p><p>复制获取到的标签，打开主题<code>next/layout/_partials/head.swig</code>，把代码粘贴到里边。</p><p><img src="http://ow9hz0bvy.bkt.clouddn.com/WX20170918-154923.png" alt="谷歌标签"></p><p>然后终端提交更新，然后网页上的验证，就可以通过验证了。</p><p>参考：</p><ol><li><a href="http://www.jianshu.com/p/86557c34b671" target="_blank" rel="external">Hexo Seo优化让你的博客在google搜索排名第一</a></li><li><a href="http://blog.csdn.net/zaoan_wx/article/details/50859675" target="_blank" rel="external">Hexo SEO优化</a></li><li><a href="http://www.arao.me/2015/hexo-next-theme-optimize-seo/" target="_blank" rel="external">动动手指，不限于NexT主题的Hexo优化（SEO篇）</a></li><li><a href="http://www.jianshu.com/p/8c0707ce5da4" target="_blank" rel="external">Hexo博客收录百度和谷歌-基于Next主题</a></li><li><a href="http://blog.csdn.net/sunshine940326/article/details/70936988" target="_blank" rel="external">hexo高阶教程：想让你的博客被更多的人在搜索引擎中搜到吗？</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;我建好了博客上传了内容，才发现其他人其实根本就不能在网上搜到我，自嗨的很开心。但是建立博客的目的不就是想让更多的人发现和评论我写的东西么，所以让搜索引擎知道和收录我的网站就很重要了。&lt;/p&gt;
+&lt;p&gt;所以我在网上找了各种大神留下的教程，自己慢慢的学着优化博客。&lt;/p&gt;
+&lt;h3
+      
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="SEO" scheme="http://yoursite.com/tags/SEO/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo 如何给文章添加分类和标签</title>
@@ -67,9 +98,9 @@
     
       <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
     
-      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
       <category term="主题设定" scheme="http://yoursite.com/tags/%E4%B8%BB%E9%A2%98%E8%AE%BE%E5%AE%9A/"/>
+    
+      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="next" scheme="http://yoursite.com/tags/next/"/>
     
