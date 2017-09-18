@@ -103,13 +103,13 @@
 <meta name="keywords" content="Hexo,博客,SEO">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo Seo简单优化">
-<meta property="og:url" content="http://yoursite.com/2017/09/18/Hexo-Seo简单优化/index.html">
+<meta property="og:url" content="http://249251.xyz/2017/09/18/Hexo-Seo简单优化/index.html">
 <meta property="og:site_name" content="荡漾在249~251之间">
 <meta property="og:description" content="我建好了博客上传了内容，才发现其他人其实根本就不能在网上搜到我，自嗨的很开心。但是建立博客的目的不就是想让更多的人发现和评论我写的东西么，所以让搜索引擎知道和收录我的网站就很重要了。 所以我在网上找了各种大神留下的教程，自己慢慢的学着优化博客。 验证网站在百度和谷歌上分别搜索 1site:你的博客域名链接 注意博客域名不是xxx.github.io。 如果此前没有进行过操作，应该是搜不到的，并且搜">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ow9hz0bvy.bkt.clouddn.com/WX20170918-151702.png">
 <meta property="og:image" content="http://ow9hz0bvy.bkt.clouddn.com/WX20170918-154923.png">
-<meta property="og:updated_time" content="2017-09-18T08:06:38.000Z">
+<meta property="og:updated_time" content="2017-09-18T09:59:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo Seo简单优化">
 <meta name="twitter:description" content="我建好了博客上传了内容，才发现其他人其实根本就不能在网上搜到我，自嗨的很开心。但是建立博客的目的不就是想让更多的人发现和评论我写的东西么，所以让搜索引擎知道和收录我的网站就很重要了。 所以我在网上找了各种大神留下的教程，自己慢慢的学着优化博客。 验证网站在百度和谷歌上分别搜索 1site:你的博客域名链接 注意博客域名不是xxx.github.io。 如果此前没有进行过操作，应该是搜不到的，并且搜">
@@ -143,7 +143,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/18/Hexo-Seo简单优化/"/>
+  <link rel="canonical" href="http://249251.xyz/2017/09/18/Hexo-Seo简单优化/"/>
 
 
 
@@ -339,7 +339,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/18/Hexo-Seo简单优化/">
+    <link itemprop="mainEntityOfPage" href="http://249251.xyz/2017/09/18/Hexo-Seo简单优化/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="秋林夏木">
@@ -443,6 +443,13 @@
 <p>复制获取到的标签，打开主题<code>next/layout/_partials/head.swig</code>，把代码粘贴到里边。</p>
 <p><img src="http://ow9hz0bvy.bkt.clouddn.com/WX20170918-154923.png" alt="谷歌标签"></p>
 <p>然后终端提交更新，然后网页上的验证，就可以通过验证了。</p>
+<h3 id="生成站点地图"><a href="#生成站点地图" class="headerlink" title="生成站点地图"></a>生成站点地图</h3><p>想要被搜索引擎收录，就需要站点地图，站点地图是一个网站所有链接的容器。很多网站的连接层次比较深，爬虫很难抓取到，站点地图可以方便爬虫抓取网站页面，通过抓取网站页面，清晰了解网站的架构，网站地图一般存放在根目录下并命名sitemap，为爬虫指路，增加网站重要内容页面的收录。</p>
+<p>我们需要使用npm自动生成网站的sitemap，然后将生成的sitemap提交到百度和其他搜索引擎</p>
+<p>安装sitemap插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-sitemap --save     </div><div class="line">npm install hexo-generator-baidu-sitemap --save</div></pre></td></tr></table></figure>
+<p>然后修改博客的配置文件<code>_config.yml</code>，把文件中url改为你的站点地址。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># URL</div><div class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</div><div class="line">url: http://249251.xyz</div><div class="line">root: /</div><div class="line">permalink: :year/:month/:day/:title/</div><div class="line">permalink_defaults:</div></pre></td></tr></table></figure>
+<p>执行完之后就会在网站根目录生成<code>sitemap.xml</code>文件和<code>baidusitemap.xml</code>文件，其中<code>sitemap.xml</code>文件是搜索引擎通用的文件，<code>baidusitemap.xml</code>是百度专用的sitemap文件。</p>
 <p>参考：</p>
 <ol>
 <li><a href="http://www.jianshu.com/p/86557c34b671" target="_blank" rel="external">Hexo Seo优化让你的博客在google搜索排名第一</a></li>
@@ -661,7 +668,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#验证网站"><span class="nav-number">1.</span> <span class="nav-text">验证网站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提交域名"><span class="nav-number">2.</span> <span class="nav-text">提交域名</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#验证网站"><span class="nav-number">1.</span> <span class="nav-text">验证网站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提交域名"><span class="nav-number">2.</span> <span class="nav-text">提交域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成站点地图"><span class="nav-number">3.</span> <span class="nav-text">生成站点地图</span></a></li></ol></div>
             
 
           </div>
@@ -703,7 +710,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共5.5k字</span>
+  <span class="post-count">博客全站共5.8k字</span>
 </div>
 
         
