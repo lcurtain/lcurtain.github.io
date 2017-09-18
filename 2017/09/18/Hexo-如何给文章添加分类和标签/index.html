@@ -105,7 +105,7 @@
 <meta property="og:site_name" content="荡漾在249~251之间">
 <meta property="og:description" content="我们建好了博客，上传了自己写的文章，但是博客首页只有按照时间顺序的文章列表，却没有按照你的想法把文章按照类型区分，这时候，你就需要自己在写好的文章中添加标签和分类。 首先，你需要在终端里新建这两个页面： 代码 12hexo new page tagshexo new page categories 新建完成的页面会在根目录source/生成两个同名文件。 打开 tags/index.md ，并改成">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-18T02:52:29.000Z">
+<meta property="og:updated_time" content="2017-09-18T02:59:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 如何给文章添加分类和标签">
 <meta name="twitter:description" content="我们建好了博客，上传了自己写的文章，但是博客首页只有按照时间顺序的文章列表，却没有按照你的想法把文章按照类型区分，这时候，你就需要自己在写好的文章中添加标签和分类。 首先，你需要在终端里新建这两个页面： 代码 12hexo new page tagshexo new page categories 新建完成的页面会在根目录source/生成两个同名文件。 打开 tags/index.md ，并改成">
@@ -422,6 +422,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title: 标签</div><div class="line">date: 日期</div><div class="line">type: &quot;tags&quot;</div><div class="line">comments: false</div></pre></td></tr></table></figure>
 <p>打开<code>category/index.md</code>，改为：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title: 分类</div><div class="line">date: 日期</div><div class="line">type: &quot;categories&quot;</div><div class="line">comments: false</div></pre></td></tr></table></figure>
+<p>如果你的页面有评论功能，请加上<code>comments: false</code>，表示关闭评论。</p>
 <p>接着打开主题配置文件，找到<code>menu</code>，把<code>tges</code>和<code>categories</code>前的#去掉，让这两项在页面上展示。</p>
 <p>接下来，当你上传文章时，需要在标题和分类里添加你想要的分类。</p>
 <p>比如这篇文章</p>

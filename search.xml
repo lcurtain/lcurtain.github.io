@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Hexo 如何给文章添加分类和标签]]></title>
     <url>%2F2017%2F09%2F18%2FHexo-%E5%A6%82%E4%BD%95%E7%BB%99%E6%96%87%E7%AB%A0%E6%B7%BB%E5%8A%A0%E5%88%86%E7%B1%BB%E5%92%8C%E6%A0%87%E7%AD%BE%2F</url>
-    <content type="text"><![CDATA[我们建好了博客，上传了自己写的文章，但是博客首页只有按照时间顺序的文章列表，却没有按照你的想法把文章按照类型区分，这时候，你就需要自己在写好的文章中添加标签和分类。 首先，你需要在终端里新建这两个页面： 代码 12hexo new page tagshexo new page categories 新建完成的页面会在根目录source/生成两个同名文件。 打开 tags/index.md ，并改成： 1234title: 标签date: 日期type: &quot;tags&quot;comments: false 打开category/index.md，改为： 1234title: 分类date: 日期type: &quot;categories&quot;comments: false 接着打开主题配置文件，找到menu，把tges和categories前的#去掉，让这两项在页面上展示。 接下来，当你上传文章时，需要在标题和分类里添加你想要的分类。 比如这篇文章 123456789---title: Hexo 如何给文章添加分类和标签date: 2017-09-18 10:39:38tags:- Hexo- 博客categories: - Hexo--- 这样你的文章就会显示在相应的归档和标签里了。]]></content>
+    <content type="text"><![CDATA[我们建好了博客，上传了自己写的文章，但是博客首页只有按照时间顺序的文章列表，却没有按照你的想法把文章按照类型区分，这时候，你就需要自己在写好的文章中添加标签和分类。 首先，你需要在终端里新建这两个页面： 代码 12hexo new page tagshexo new page categories 新建完成的页面会在根目录source/生成两个同名文件。 打开 tags/index.md ，并改成： 1234title: 标签date: 日期type: &quot;tags&quot;comments: false 打开category/index.md，改为： 1234title: 分类date: 日期type: &quot;categories&quot;comments: false 如果你的页面有评论功能，请加上comments: false，表示关闭评论。 接着打开主题配置文件，找到menu，把tges和categories前的#去掉，让这两项在页面上展示。 接下来，当你上传文章时，需要在标题和分类里添加你想要的分类。 比如这篇文章 123456789---title: Hexo 如何给文章添加分类和标签date: 2017-09-18 10:39:38tags:- Hexo- 博客categories: - Hexo--- 这样你的文章就会显示在相应的归档和标签里了。]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
