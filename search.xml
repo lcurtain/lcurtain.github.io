@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[“婚恋观，亲密关系和爱情理论的书单”]]></title>
+    <url>%2F2017%2F09%2F19%2F%E2%80%9C%E5%A9%9A%E6%81%8B%E8%A7%82%EF%BC%8C%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB%E5%92%8C%E7%88%B1%E6%83%85%E7%90%86%E8%AE%BA%E7%9A%84%E4%B9%A6%E5%8D%95%E2%80%9D%2F</url>
+    <content type="text"><![CDATA[婚恋观，亲密关系和爱情理论的书单 《进化心理学》 《爱的自然史》 《性审判史》 《从相残到相爱》 《爱情社会学》 《性史1926》 《精子战争》 《中国古代房内考》 《爱情心理学》 《人类的性存在》 《性与社会》 《部落动物》 《孤独的性：手淫文化史》 《亲密关系》 《情商》 《婚姻史》]]></content>
+      <categories>
+        <category>阅读</category>
+        <category>书单</category>
+      </categories>
+      <tags>
+        <tag>书单</tag>
+        <tag>阅读</tag>
+        <tag>婚姻</tag>
+        <tag>亲密关系</tag>
+        <tag>性</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hexo Seo简单优化]]></title>
     <url>%2F2017%2F09%2F18%2FHexo-Seo%E7%AE%80%E5%8D%95%E4%BC%98%E5%8C%96%2F</url>
     <content type="text"><![CDATA[我建好了博客上传了内容，才发现其他人其实根本就不能在网上搜到我，自嗨的很开心。但是建立博客的目的不就是想让更多的人发现和评论我写的东西么，所以让搜索引擎知道和收录我的网站就很重要了。 所以我在网上找了各种大神留下的教程，自己慢慢的学着优化博客。 验证网站在百度和谷歌上分别搜索 1site:你的博客域名链接 注意博客域名不是xxx.github.io。 如果此前没有进行过操作，应该是搜不到的，并且搜索出来的结果含有搜索引擎提交入口。 提交域名需要在各个搜索引擎的站长平台添加自己的网站。 百度站长平台 搜狗站长平台 谷歌Search Console 原理都相同，进入搜索引擎提交入口，添加域名，选择验证网站，有3种验证方式，本文推荐采用HTML标签验证。 复制获取到的标签，打开主题next\layout\_partials\head.swig，把代码粘贴到里边。 然后终端提交更新，然后网页上的验证，就可以通过验证了。 生成站点地图想要被搜索引擎收录，就需要站点地图，站点地图是一个网站所有链接的容器。很多网站的连接层次比较深，爬虫很难抓取到，站点地图可以方便爬虫抓取网站页面，通过抓取网站页面，清晰了解网站的架构，网站地图一般存放在根目录下并命名sitemap，为爬虫指路，增加网站重要内容页面的收录。 我们需要使用npm自动生成网站的sitemap，然后将生成的sitemap提交到百度和其他搜索引擎 安装sitemap插件 12npm install hexo-generator-sitemap --save npm install hexo-generator-baidu-sitemap --save 然后修改博客的配置文件_config.yml，把文件中url改为你的站点地址。 123456# URL## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;url: http://249251.xyzroot: /permalink: :year/:month/:day/:title/permalink_defaults: 执行完之后就会在网站根目录/public生成sitemap.xml文件和baidusitemap.xml文件，其中sitemap.xml文件是搜索引擎通用的文件，baidusitemap.xml是百度专用的sitemap文件。 自动推送next主题配置文件，将baidu_push改为true 12# Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEObaidu_push: false 然后你可以找到themes\next\layout\_third-party\seo\baidu_push.swig,这样每次访问博客中的页面就会自动向百度提交sitemap 主动推送在Hexo根目录下，安装插件： 1npm install hexo-baidu-url-submit --save 把以下内容配置到_config.yml文件中: 12345baidu_url_submit: count: 3 ## 比如3，代表提交最新的三个链接 host: www.hui-wang.info ## 在百度站长平台中注册的域名 token: your_token ## 请注意这是您的秘钥， 请不要发布在公众仓库里! path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里 这里的token可以在百度站长链接提交中找到 记得查看_config.ym文件中url的值， 必须包含是百度站长平台注册的域名（一般有www）， 比如: 1234# URLurl: http://249251.xyzroot: /permalink: :year/:month/:day/:title/ 最后，加入新的deployer: 12345deploy:- type: git repo: coding: https://用户名:密码@git.coding.net/bellonor/bellonor.git,master- type: baidu_url_submitter 执行hexo deploy的时候，新的连接就会被推送了。 参考： Hexo Seo优化让你的博客在google搜索排名第一 Hexo SEO优化 动动手指，不限于NexT主题的Hexo优化（SEO篇） Hexo博客收录百度和谷歌-基于Next主题 hexo高阶教程：想让你的博客被更多的人在搜索引擎中搜到吗？]]></content>
